@@ -3,7 +3,7 @@ use std::sync::Once;
 
 static START: Once = Once::new();
 
-pub fn draw_text_image() {
+pub fn draw_text_image(file_name: &str) {
     // Initialize MagickWand
     START.call_once(|| {
         magick_wand_genesis();
@@ -39,5 +39,5 @@ pub fn draw_text_image() {
     let _ = wand.draw_image(&draw_wand);
 
     // Save the image
-    wand.write_image("output.png").unwrap();
+    wand.write_image(file_name).unwrap();
 }
