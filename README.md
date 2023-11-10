@@ -10,6 +10,7 @@
 ## compare
 
 imagemagick: 50.15888ms
+
 imageproc: 3.172496ms
 
 ## output
